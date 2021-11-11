@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer List</title>
+</head>
+<body>
+	
+	<table class = "table">
+	
+	<tr>
+		<th> Nombre </th>
+		<th> Primer apellido </th>
+		<th> Segundo apellido </th>
+		<th> DNI </th>
+	</tr>
+	
+
+	 		<tr th:each = "EverisCustomer : ${customerList}">
+	 		<td th:text="${EverisCustomer.getName()}"></td>
+	 		<td th:text="${EverisCustomer.getSurName1()}"></td>
+	 		<td th:text="${EverisCustomer.getSurName2()}"></td>
+	 		<td th:text="${EverisCustomer.getIdentityDocNumber()}"></td>
+	 	</tr>
+	 
+	
+	 	
+
+</table>	
+<a href="homePage" > Volver al menu</a>
+</body>
+</html>
